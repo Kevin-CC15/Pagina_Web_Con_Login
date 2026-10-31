@@ -1,0 +1,83 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades - Reloj, Convertidor y Calculadora</title>
+    <link rel="stylesheet" href="Estilos/Estilo_Actividades.css">
+</head>
+<body>
+
+    <header>
+        <h1>Mis Actividades</h1>
+        <div id="fecha-hora-actual" style="font-size: 1.1rem; font-weight: bold; color: #333;"></div>
+    </header>
+
+    <main>
+        <section class="seccion-herramienta">
+            <h3>Convertidor a Pesos</h3>
+            <label for="monto-usd">Cantidad en Dólares:</label>
+            <input type="number" id="monto-usd" placeholder="Ej. 10">
+            
+            <button onclick="convertirMoneda()" class="btn-azul">Convertir</button>
+            
+            <p id="resultado-conversion" style="margin-top: 10px; font-weight: bold;"></p>
+        </section>
+
+        <section class="seccion-herramienta">
+            <h3>Calculadora</h3>
+            <input type="text" id="pantalla-calc" readonly>
+            
+            <div class="calc-grid">
+                <button onclick="limpiarCalc()" class="btn-rojo">C</button>
+                <button onclick="agregarValor('/')" class="btn-gris">/</button>
+                <button onclick="agregarValor('*')" class="btn-gris">*</button>
+                <button onclick="agregarValor('-')" class="btn-gris">-</button>
+                
+                <button onclick="agregarValor('7')">7</button>
+                <button onclick="agregarValor('8')">8</button>
+                <button onclick="agregarValor('9')">9</button>
+                <button onclick="agregarValor('+')" class="btn-gris">+</button>
+                
+                <button onclick="agregarValor('4')">4</button>
+                <button onclick="agregarValor('5')">5</button>
+                <button onclick="agregarValor('6')">6</button>
+                <button onclick="calcularResultado()" class="btn-verde">=</button>
+                
+                <button onclick="agregarValor('1')">1</button>
+                <button onclick="agregarValor('2')">2</button>
+                <button onclick="agregarValor('3')">3</button>
+                
+                <button onclick="agregarValor('0')" style="grid-column: span 2;">0</button>
+                <button onclick="agregarValor('.')">.</button>
+            </div>
+        </section>
+
+        <section class="seccion-herramienta">
+            <h3>Cuestionario Rápido</h3>
+            <div id="pregunta-texto" style="font-weight: bold; margin-bottom: 10px;"></div>
+            <div id="opciones-contenedor"></div>
+            <p id="resultado-quiz" style="margin-top: 10px; font-weight: bold;"></p>
+        </section>
+    </main>
+
+    <script src="funciones/Convertidor.js"></script>
+    <script src="funciones/Calculadora.js"></script>
+    <script src="funciones/Cuestionario.js"></script>
+
+    <script>
+        function actualizarFechaHora() {
+            const contenedor = document.getElementById('fecha-hora-actual');
+            const ahora = new Date();
+            const opcionesFecha = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            let fechaTexto = ahora.toLocaleDateString('es-ES', opcionesFecha);
+            let horaTexto = ahora.toLocaleTimeString('es-ES');
+            fechaTexto = fechaTexto.charAt(0).toUpperCase() + fechaTexto.slice(1);
+            contenedor.innerHTML = `${fechaTexto} — ${horaTexto}`;
+        }
+        actualizarFechaHora();
+        setInterval(actualizarFechaHora, 1000);
+    </script>
+
+    <a href="index.php" class="boton-pagina">Volver a la Página Principal</a>
+</body>
+</html>

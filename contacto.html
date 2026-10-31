@@ -1,0 +1,81 @@
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacto</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='Estilos/Estilo_Formulario.css'>
+
+</head>
+<body>
+
+    <h1>FORMULARIO DE CONTACTO</h1>
+    
+    <form id="formContacto" action="" method="post">
+        
+        <fieldset>
+            <legend>Uso de caja de texto - Nombre</legend>
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" name="nombre" type="text">
+            
+            <label for="apellidos">Apellido:</label>
+            <input id="apellidos" name="apellidos" type="text">
+        </fieldset>
+
+        <fieldset>
+            <legend>Uso de radio buttons - Género</legend>
+            <div>
+                <input type="radio" name="genero" id="radioM" value="Masculino">
+                <label for="radioM" style="display:inline;">Masculino</label>
+            </div>
+            <div>
+                <input type="radio" name="genero" id="radioF" value="Femenino">
+                <label for="radioF" style="display:inline;">Femenino</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>USO DE CHECK BOX - INTERESES</legend>
+            <div>
+                <input type="checkbox" name="intereses" id="c1" value="Deportes">
+                <label for="c1" style="display:inline;">Hacer Deporte</label>
+            </div>
+            <div>
+                <input type="checkbox" name="intereses" id="c2" value="Television">
+                <label for="c2" style="display:inline;">Ver televisión</label>
+            </div>
+            <div>
+                <input type="checkbox" name="intereses" id="c3" value="Ejercicio">
+                <label for="c3" style="display:inline;">Hacer ejercicio</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>USO DEL SELECT - ESTUDIOS ACTUALES</legend>
+            <select name="estudios" id="estudios">
+                <option value="">Selecciona una opción...</option>
+                <option value="Secundaria">Secundaria</option>
+                <option value="Bachillerato">Bachillerato</option>
+                <option value="Licenciatura">Licenciatura</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Uso de Textarea - Comentarios</legend>
+            <label for="comentarios">Escribe un comentario:</label><br>
+            <textarea id="comentarios" name="comentarios" rows="4" style="width: 100%; margin-top: 5px; box-sizing: border-box;"></textarea>
+        </fieldset>
+
+        <p id="error-mensaje" style="color: red; font-weight: bold;"></p>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <br>
+    <a href="index.php" class="boton-pagina">Mi otra página</a>
+
+    <script src="funciones/ValidacionFormulario.js"></script>
+
+</body>
+</html>

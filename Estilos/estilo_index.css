@@ -1,0 +1,136 @@
+h2{
+    color: black;
+    text-align: center;
+    font-size: 24px;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    line-height: 3;
+    margin-bottom: 5px;
+}
+
+img{
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.tarjetas-div{
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    overflow: hidden;
+    margin: 0px auto;
+    border-radius: 0px;
+    box-shadow: inset 0 10px 25px rgba(255, 255, 255, 0.8);
+}
+
+.fondo-tarjeta1{
+    background-color: rgba(234, 222, 84, 0.953);
+}
+
+.fondo-tarjeta2{
+    background-color: rgba(110, 207, 216, 0.953);
+}
+
+.fondo-tarjeta3{
+    background-color: rgba(216, 104, 210, 0.953);
+}
+
+.fondo-tarjeta4{
+    background-color: rgba(120, 107, 235, 0.953);
+}
+
+.tarjeta-contenido, .tarjeta-imagen {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+
+.tarjeta-contenido h2{
+    color: rgb(0, 0, 0);
+    margin-top: 0px;
+    font-size: 2.2rem;
+}
+
+.tarjeta-contenido p{
+    color: rgb(0, 0, 0);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.boton-pagina{
+    display: inline-block;
+    background-color: rgba(52,152,219);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    width: fit-content;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton-pagina:hover{
+    background-color: rgba(51,51,51);
+    transform: scale(0.95px);
+}
+
+.tarjeta-imagen img{
+    width: 100%;
+    height: 100%;
+    max-width: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.tarjeta-imagen{
+    padding: 0;
+}
+
+.cuadro-texto {
+    align-items: center;
+    overflow: hidden;
+    align-items: stretch;
+    background-color: rgba(245, 240, 220, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(233, 227, 75);
+    width: 350px;
+    height: 450px;
+    margin: 20px 15px 15px;
+}
+
+.cuadro-texto p {
+    color: rgb(62, 39, 35);
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+
+.boton-cuadro-texto{
+    align-items: center;
+    background-color: rgba(42,125,50);
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
